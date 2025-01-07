@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f8ff;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="40" height="40"><path d="M30,40 Q35,35 40,40 Q45,35 50,40 L45,50 L35,50 Z M38,45 L42,45 L40,48 Z" fill="%23c4d3e2" opacity="0.3"/></svg>');
+    background-size: 40px 40px;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+#title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#title::before,
+#title::after {
+    content: "🐱";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+}
+
+#title::before {
+    left: 20px;
+}
+
+#title::after {
+    right: 20px;
+}
+
+#description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.form-group:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    background-color: white;
+}
+
+.radio-group,
+.checkbox-group {
+    margin: 10px 0;
+    padding: 5px 0;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: inline;
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#submit {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#submit:hover {
+    background-color: #2980b9;
+}
+
+#submit::after {
+    content: "🐾";
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: right 0.3s ease;
+}
+
+#submit:hover::after {
+    right: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+        padding: 10px;
+    }
+    
+    #title::before,
+    #title::after {
+        display: none;
+    }
+}

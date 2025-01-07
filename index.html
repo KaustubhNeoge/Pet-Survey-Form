@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Pet Survey Form</h1>
+        <p id="description">This is a pet welfare survey form. Please fill the form. The requirements with * are required to be filled.</p>
+        
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name *</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label id="email-label" for="email">Email *</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label id="number-label" for="number">Number of Pets</label>
+                <input type="number" id="number" min="0" max="20" placeholder="How many pets do you have?">
+            </div>
+
+            <div class="form-group">
+                <label for="dropdown">Type of Pet *</label>
+                <select id="dropdown" required>
+                    <option value="">Select pet type</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="bird">Bird</option>
+                    <option value="fish">Fish</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>How often do you visit the vet?</label>
+                <div class="radio-group">
+                    <input type="radio" name="vet-visits" value="monthly" id="monthly">
+                    <label for="monthly">Monthly</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="vet-visits" value="quarterly" id="quarterly">
+                    <label for="quarterly">Quarterly</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="vet-visits" value="yearly" id="yearly">
+                    <label for="yearly">Yearly</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>What pet services do you use? (Check all that apply)</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" value="grooming" id="grooming">
+                    <label for="grooming">Grooming</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" value="boarding" id="boarding">
+                    <label for="boarding">Boarding</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" value="training" id="training">
+                    <label for="training">Training</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" value="daycare" id="daycare">
+                    <label for="daycare">Daycare</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Additional Comments About Your Pet</label>
+                <textarea id="comments" placeholder="Tell us more about your pet..." rows="4"></textarea>
+            </div>
+
+            <button type="submit" id="submit">Submit Survey</button>
+        </form>
+    </div>
+</body>
+</html>
